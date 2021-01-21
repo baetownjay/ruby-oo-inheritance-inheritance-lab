@@ -3,6 +3,7 @@
 require_relative "../lib/user.rb"
 require_relative "../lib/teacher.rb"
 require_relative "../lib/student.rb"
+require 'pry'
 
 steve = Student.new
 steve.first_name = "Steve"
@@ -16,5 +17,19 @@ avi.last_name = "Flombaum"
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
+steve.learn(some_knowledge)
+steve.learn(some_knowledge)
+
+me = Student.new
+me.first_name = "Jason"
+me.last_name = "Herrera" 
+
+me.learn(some_knowledge)
+
+kim = User.new
+kim.first_name = "Kim"
+kim.last_name = "Wu"
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Jason just learned this important knowledge: '#{me.knowledge.first}' from Avi"
+#binding.pry
